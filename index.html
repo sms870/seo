@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3주만에 논문완성하기</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Malgun Gothic', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            background: #ff6b6b;
+            color: white;
+            padding: 18px 50px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 107, 107, 0.4);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .features {
+            padding: 80px 20px;
+            background: #f8f9fa;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            color: #333;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #667eea;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .timeline {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .timeline h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            color: #333;
+        }
+
+        .timeline-item {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 40px;
+            align-items: flex-start;
+        }
+
+        .week-badge {
+            background: #667eea;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 10px;
+            font-weight: bold;
+            min-width: 100px;
+            text-align: center;
+        }
+
+        .timeline-content {
+            flex: 1;
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        .timeline-content h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .pricing {
+            padding: 80px 20px;
+            background: #f8f9fa;
+            text-align: center;
+        }
+
+        .pricing h2 {
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            color: #333;
+        }
+
+        .price-card {
+            background: white;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.15);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .price {
+            font-size: 3rem;
+            color: #667eea;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .price-features {
+            list-style: none;
+            margin: 30px 0;
+            text-align: left;
+        }
+
+        .price-features li {
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .price-features li:before {
+            content: "✓ ";
+            color: #51cf66;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        footer {
+            background: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .timeline-item {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="container">
+            <h1>3주만에 논문완성하기</h1>
+            <p>체계적인 시스템으로 단기간에 완성도 높은 논문을 작성하세요</p>
+            <button class="cta-button" onclick="scrollToPrice()">지금 시작하기</button>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2>왜 3주 논문 프로그램인가?</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>📚 체계적인 커리큘럼</h3>
+                    <p>3주간의 단계별 학습 로드맵으로 논문 작성의 모든 과정을 체계적으로 학습합니다.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>👨‍🏫 전문가 피드백</h3>
+                    <p>경험 많은 논문 지도 전문가의 1:1 맞춤 피드백으로 완성도를 높입니다.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>⚡ 실전 중심 학습</h3>
+                    <p>이론보다는 실제 논문 작성에 집중하여 빠르게 결과물을 완성합니다.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📝 템플릿 제공</h3>
+                    <p>검증된 논문 템플릿과 예시 자료로 작성 시간을 단축합니다.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>👥 스터디 그룹</h3>
+                    <p>같은 목표를 가진 동료들과 함께 동기부여를 받으며 진행합니다.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>✅ 완성 보장</h3>
+                    <p>3주 안에 제출 가능한 수준의 논문 완성을 보장합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="timeline">
+        <div class="container">
+            <h2>3주 완성 로드맵</h2>
+            <div class="timeline-item">
+                <div class="week-badge">1주차</div>
+                <div class="timeline-content">
+                    <h3>주제 선정 & 문헌 조사</h3>
+                    <p>연구 주제를 명확히 설정하고 관련 선행 연구를 분석합니다. 연구 질문을 구체화하고 논문의 틀을 잡습니다.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="week-badge">2주차</div>
+                <div class="timeline-content">
+                    <h3>연구 방법론 & 본론 작성</h3>
+                    <p>연구 방법을 설계하고 데이터를 수집·분석합니다. 본론의 핵심 내용을 작성하고 논리적 흐름을 구축합니다.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="week-badge">3주차</div>
+                <div class="timeline-content">
+                    <h3>결론 작성 & 최종 편집</h3>
+                    <p>연구 결과를 정리하고 결론을 도출합니다. 전체 논문을 다듬고 참고문헌을 정리하여 최종 완성합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2>프로그램 안내</h2>
+            <div class="price-card">
+                <h3>3주 완성 프로그램</h3>
+                <div class="price">₩299,000</div>
+                <ul class="price-features">
+                    <li>3주간 온라인 강의 제공</li>
+                    <li>주 2회 전문가 1:1 피드백</li>
+                    <li>논문 작성 템플릿 및 가이드</li>
+                    <li>24시간 Q&A 지원</li>
+                    <li>스터디 그룹 참여</li>
+                    <li>평생 자료 열람 가능</li>
+                    <li>수료증 발급</li>
+                </ul>
+                <button class="cta-button">신청하기</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 3주만에 논문완성하기. All rights reserved.</p>
+            <p>문의: sms870@email.com</p>
+        </div>
+    </footer>
+
+    <script>
+        function scrollToPrice() {
+            document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
